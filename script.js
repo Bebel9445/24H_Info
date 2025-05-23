@@ -293,9 +293,9 @@ function quiz(){
         }, 50);
         document.body.appendChild(div);
     }
-    else if (checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !bobineoColl && !popup && !quiz_effectue){
+    else if (checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !bobineColl && !popup && !quiz_effectue){
         createPopup("Vous n'avez pas encore trouvé toutes les informations nécessaires pour résoudre l'énigme...")
-        bobineoColl = true;
+        bobineColl = true;
     }
 }
 
