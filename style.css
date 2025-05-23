@@ -12,10 +12,6 @@ html {
 }
 
 
-table {
-    background-color: #f0f0f0;
-}
-
 canvas {
     position: absolute;
     top: 0;
