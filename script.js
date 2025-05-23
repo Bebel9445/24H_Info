@@ -3,6 +3,8 @@ function test() {
 }
 
 const SolImage = new Image();
+SolImage.src = "assets/Sol.jpg";
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -40,10 +42,11 @@ const speed = 3;
 // Charger les images
 const PersoImmoImage = new Image();
 PersoImmoImage.src = "assets/PersoImmo.png";
+let PersoImmoColl = false;
 
 const bobineImage = new Image();
 bobineImage.src = "assets/bobine.png";
-let bobineoColl = false;
+let bobineColl = false;
 
 const chaiseImage = new Image();
 chaiseImage.src = "assets/chaise.png";
@@ -345,4 +348,3 @@ function gameLoop() {
 
     requestAnimationFrame(gameLoop);
 }
-
