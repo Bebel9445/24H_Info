@@ -1,0 +1,69 @@
+/*Modifications générales*/
+
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'NomDeVotrePolice';
+    src: url('nuit_info_2024/asset/Pieces of Eight.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+table {
+    background-color: #f0f0f0;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Pieces of Eight;
+}
+
+
+/* Styles généraux du site */
+body {
+    font-family: Pieces of Eight;
+    padding: 20px;
+    height: 100%;  /* Juste pour avoir une page avec du scroll */
+    background-color: #f0f0f0;
+  }
+
+
+  body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+img {
+    position: absolute;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#gif {
+    display: none; /* Masquer le GIF au départ */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100; /* Assurez-vous que le GIF est au-dessus des autres éléments */
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Conserve le ratio d'aspect */
+}
