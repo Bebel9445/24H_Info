@@ -42,11 +42,11 @@ const PersoImmoImage = new Image();
 PersoImmoImage.src = "assets/PersoImmo.png";
 
 const bobineImage = new Image();
-bobineImage.src = "assets/bobineo.png";
+bobineImage.src = "assets/bobine.png";
 let bobineoColl = false;
 
 const chaiseImage = new Image();
-chaiseImage.src = "assets/chaiseon.png";
+chaiseImage.src = "assets/chaise.png";
 let chaiseColl = false;
 
 const ecranImage = new Image();
@@ -130,7 +130,6 @@ function checkCollision(x, y, width, height) {
            PersoImmoY < y + height &&
            PersoImmoY + PersoImmoHeight > y;
 }
-
 
 function createPopup(text) {
     popup = true
