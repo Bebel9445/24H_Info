@@ -1,0 +1,406 @@
+{
+  "largeur_salle": 10.0,
+  "longueur_salle": 10.0,
+  "oeuvres": [
+  {
+    "id": "Le_Masque_des_Ancetres_Muets",
+    "largeur": 1.1,
+    "longueur": 1.82,
+    "valeur_artistique": 61,
+    "valeur_historique": 59,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Memoire_de_ma_Grand_Mere",
+    "largeur": 1.13,
+    "longueur": 1.89,
+    "valeur_artistique": 60,
+    "valeur_historique": 81,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Danse_des_Petales_Rouges",
+    "largeur": 1.81,
+    "longueur": 2.09,
+    "valeur_artistique": 44,
+    "valeur_historique": 88,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Les_Silences_de_lAube",
+    "largeur": 1.96,
+    "longueur": 2.56,
+    "valeur_artistique": 53,
+    "valeur_historique": 95,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Reve_de_la_Tortue_Celeste",
+    "largeur": 1.05,
+    "longueur": 1.54,
+    "valeur_artistique": 79,
+    "valeur_historique": 54,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Fleuve_de_Lune",
+    "largeur": 1.25,
+    "longueur": 2.23,
+    "valeur_artistique": 94,
+    "valeur_historique": 11,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Lignes_dAcier",
+    "largeur": 1.0,
+    "longueur": 2.79,
+    "valeur_artistique": 42,
+    "valeur_historique": 99,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Les_Mille_Reflets_du_Bouddha",
+    "largeur": 1.07,
+    "longueur": 2.73,
+    "valeur_artistique": 51,
+    "valeur_historique": 55,
+    "categorie": "Asie"
+  },
+  {
+    "id": "LEtreinte_de_lOmbre",
+    "largeur": 2.03,
+    "longueur": 2.31,
+    "valeur_artistique": 37,
+    "valeur_historique": 87,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Memoire_du_Vent_Sale",
+    "largeur": 1.83,
+    "longueur": 2.19,
+    "valeur_artistique": 65,
+    "valeur_historique": 52,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Chants_du_Tambour_Creux",
+    "largeur": 1.48,
+    "longueur": 2.54,
+    "valeur_artistique": 96,
+    "valeur_historique": 35,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Coyote_sous_la_Lune_Rouge",
+    "largeur": 1.22,
+    "longueur": 2.51,
+    "valeur_artistique": 59,
+    "valeur_historique": 90,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "LEsprit_du_Tigre_Endormi",
+    "largeur": 1.66,
+    "longueur": 2.02,
+    "valeur_artistique": 93,
+    "valeur_historique": 34,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Fenetre_sur_Delft",
+    "largeur": 1.34,
+    "longueur": 2.4,
+    "valeur_artistique": 41,
+    "valeur_historique": 47,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Voix_de_Lave",
+    "largeur": 1.33,
+    "longueur": 2.24,
+    "valeur_artistique": 77,
+    "valeur_historique": 50,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "La_Lance_du_Ciel_Fendu",
+    "largeur": 1.29,
+    "longueur": 1.95,
+    "valeur_artistique": 73,
+    "valeur_historique": 51,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Le_Cri_du_Solstice",
+    "largeur": 2.25,
+    "longueur": 2.96,
+    "valeur_artistique": 91,
+    "valeur_historique": 31,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Calligraphie_du_Vent_Oublie",
+    "largeur": 1.52,
+    "longueur": 2.27,
+    "valeur_artistique": 32,
+    "valeur_historique": 83,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Chants_Slaves",
+    "largeur": 1.18,
+    "longueur": 2.36,
+    "valeur_artistique": 40,
+    "valeur_historique": 70,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Le_Tapa_des_Ancetres",
+    "largeur": 2.63,
+    "longueur": 2.67,
+    "valeur_artistique": 37,
+    "valeur_historique": 98,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Souffle_du_Baobab_Sacre",
+    "largeur": 1.98,
+    "longueur": 2.79,
+    "valeur_artistique": 73,
+    "valeur_historique": 60,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Chaleur_dAztlan",
+    "largeur": 1.15,
+    "longueur": 1.86,
+    "valeur_artistique": 51,
+    "valeur_historique": 65,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "La_Perle_des_Ancetres",
+    "largeur": 1.3,
+    "longueur": 1.59,
+    "valeur_artistique": 100,
+    "valeur_historique": 30,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Le_Festin_des_Mirages",
+    "largeur": 1.73,
+    "longueur": 2.62,
+    "valeur_artistique": 52,
+    "valeur_historique": 80,
+    "categorie": "Europe"
+  },
+  {
+    "id": "LEsprit_de_la_Mangrove",
+    "largeur": 1.08,
+    "longueur": 1.95,
+    "valeur_artistique": 99,
+    "valeur_historique": 36,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Voile_des_Etoiles_Noires",
+    "largeur": 1.97,
+    "longueur": 2.94,
+    "valeur_artistique": 34,
+    "valeur_historique": 83,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Portrait_dun_Silence",
+    "largeur": 1.77,
+    "longueur": 2.12,
+    "valeur_artistique": 96,
+    "valeur_historique": 26,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Le_Reve_du_Mont_Ecarlate",
+    "largeur": 1.36,
+    "longueur": 2.23,
+    "valeur_artistique": 41,
+    "valeur_historique": 86,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Lumiere_sur_les_Fjords",
+    "largeur": 1.76,
+    "longueur": 2.96,
+    "valeur_artistique": 99,
+    "valeur_historique": 35,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Danse_des_Spirales_Sacrees",
+    "largeur": 1.33,
+    "longueur": 2.27,
+    "valeur_artistique": 57,
+    "valeur_historique": 100,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Le_Rythme_de_la_Terre_Rouge",
+    "largeur": 1.75,
+    "longueur": 2.25,
+    "valeur_artistique": 40,
+    "valeur_historique": 44,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Totem_Fragmente",
+    "largeur": 2.16,
+    "longueur": 2.4,
+    "valeur_artistique": 96,
+    "valeur_historique": 26,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Eclat_de_Jade_Fendu",
+    "largeur": 2.37,
+    "longueur": 2.9,
+    "valeur_artistique": 72,
+    "valeur_historique": 41,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Le_Masque_de_Venus",
+    "largeur": 1.1,
+    "longueur": 2.71,
+    "valeur_artistique": 60,
+    "valeur_historique": 56,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Nuit_des_Conques_Murmurantes",
+    "largeur": 1.83,
+    "longueur": 1.89,
+    "valeur_artistique": 98,
+    "valeur_historique": 22,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "La_Danse_des_Masques_Errants",
+    "largeur": 1.71,
+    "longueur": 2.69,
+    "valeur_artistique": 51,
+    "valeur_historique": 84,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Frontiere_Flottante",
+    "largeur": 2.6,
+    "longueur": 2.76,
+    "valeur_artistique": 77,
+    "valeur_historique": 68,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Chants_de_la_Mousson",
+    "largeur": 1.62,
+    "longueur": 2.73,
+    "valeur_artistique": 92,
+    "valeur_historique": 11,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Equilibre_chromatique_n14",
+    "largeur": 2.25,
+    "longueur": 2.68,
+    "valeur_artistique": 97,
+    "valeur_historique": 33,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Sables_du_Temps_Inverse",
+    "largeur": 1.55,
+    "longueur": 2.95,
+    "valeur_artistique": 96,
+    "valeur_historique": 40,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Le_Regard_de_lIbis_Noir",
+    "largeur": 1.68,
+    "longueur": 2.14,
+    "valeur_artistique": 58,
+    "valeur_historique": 57,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Les_Mains_du_Vieux_Chene",
+    "largeur": 2.11,
+    "longueur": 2.79,
+    "valeur_artistique": 93,
+    "valeur_historique": 38,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Lanterne_des_Ames_Flottantes",
+    "largeur": 1.54,
+    "longueur": 2.29,
+    "valeur_artistique": 95,
+    "valeur_historique": 18,
+    "categorie": "Asie"
+  },
+  {
+    "id": "La_Memoire_des_Clochers",
+    "largeur": 2.61,
+    "longueur": 2.94,
+    "valeur_artistique": 66,
+    "valeur_historique": 60,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Echo_du_Corail",
+    "largeur": 1.36,
+    "longueur": 1.61,
+    "valeur_artistique": 94,
+    "valeur_historique": 13,
+    "categorie": "Oceanie"
+  },
+  {
+    "id": "Memoire_de_la_Savane_Brulee",
+    "largeur": 1.27,
+    "longueur": 1.58,
+    "valeur_artistique": 69,
+    "valeur_historique": 68,
+    "categorie": "Afrique"
+  },
+  {
+    "id": "Souffle_de_la_Terre_Creuse",
+    "largeur": 1.05,
+    "longueur": 2.0,
+    "valeur_artistique": 59,
+    "valeur_historique": 98,
+    "categorie": "Amerique"
+  },
+  {
+    "id": "Le_Lotus_de_Verre",
+    "largeur": 1.92,
+    "longueur": 2.3,
+    "valeur_artistique": 60,
+    "valeur_historique": 84,
+    "categorie": "Asie"
+  },
+  {
+    "id": "Le_Serment_de_Minuit",
+    "largeur": 1.05,
+    "longueur": 1.75,
+    "valeur_artistique": 45,
+    "valeur_historique": 92,
+    "categorie": "Europe"
+  },
+  {
+    "id": "Le_Chant_du_Feu_Souterrain",
+    "largeur": 2.1,
+    "longueur": 2.49,
+    "valeur_artistique": 99,
+    "valeur_historique": 21,
+    "categorie": "Oceanie"
+  }
+]
+}
