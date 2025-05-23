@@ -348,4 +348,3 @@ function gameLoop() {
 
     requestAnimationFrame(gameLoop);
 }
-
