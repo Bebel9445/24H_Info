@@ -12,8 +12,8 @@ let viewY = 2500;
 
 // Position des objets
 const objets = {
-    bobine: { x: 2500, y: 2500, width: 200, height: 200, image: "assets/bobineo.png", coll: false },
-    chaise: { x: 1750, y: 2000, width: 200, height: 200, image: "assets/chaiseon.png", coll: false },
+    bobine: { x: 2500, y: 2500, width: 200, height: 200, image: "assets/bobine.png", coll: false },
+    chaise: { x: 1750, y: 2000, width: 200, height: 200, image: "assets/chaise.png", coll: false },
     ecran: { x: 3250, y: 3250, width: 200, height: 200, image: "assets/ecran.png", coll: false },
     meuble: { x: 3250, y: 2000, width: 200, height: 200, image: "assets/meuble.png", coll: false },
     projo: { x: 1750, y: 3000, width: 200, height: 200, image: "assets/projo.png", coll: false }
