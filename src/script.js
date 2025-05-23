@@ -2,11 +2,7 @@ function test() {
     console.log("test")
 }
 
-const waterImage = new Image();
-const weatherImage = new Image();
-const weatherWidth = 150;
-const weatherHeight = 150;
-let meteo_code = 0;
+const solImage = new Image();
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -24,70 +20,70 @@ let viewX = 2500;
 let viewY = 2500;
 
 // Position des iles
-let cervX = 2500;
-let cervY = 2500;
+let bobineX = 2500;
+let bobineY = 2500;
 
-let poumX = 1750;
-let poumY = 2000;
+let chaiseX = 1750;
+let chaiseY = 2000;
 
-let foieX = 3250;
-let foieY = 3250;
+let ecranX = 3250;
+let ecranY = 3250;
 
-let reinX = 3250;
-let reinY = 2000;
+let meubleX = 3250;
+let meubleY = 2000;
 
-let coeurX = 1750;
-let coeurY = 3000;
+let projoX = 1750;
+let projoY = 3000;
 
 // Vitesse de déplacement
 const speed = 3;
 
 // Charger les images
-const boatImage = new Image();
-boatImage.src = "assets/boat.png";
+const PersoImmoImage = new Image();
+PersoImmoImage.src = "assets/PersoImmo.png";
 
-const cervImage = new Image();
-cervImage.src = "assets/cervo.png";
-let cervoColl = false;
+const bobineImage = new Image();
+bobineImage.src = "assets/bobineo.png";
+let bobineoColl = false;
 
-const poumImage = new Image();
-poumImage.src = "assets/poumon.png";
-let poumColl = false;
+const chaiseImage = new Image();
+chaiseImage.src = "assets/chaiseon.png";
+let chaiseColl = false;
 
-const foieImage = new Image();
-foieImage.src = "assets/foie.png";
-let foieColl = false;
+const ecranImage = new Image();
+ecranImage.src = "assets/ecran.png";
+let ecranColl = false;
 
-const reinImage = new Image();
-reinImage.src = "assets/rein.png";
-let reinColl = false;
+const meubleImage = new Image();
+meubleImage.src = "assets/meuble.png";
+let meubleColl = false;
 
-const coeurImage = new Image();
-coeurImage.src = "assets/coeur.png";
-let coeurColl = false;
+const projoImage = new Image();
+projoImage.src = "assets/projo.png";
+let projoColl = false;
 
 let popup = false; // Popup affiché ou non
 
-const waterWidth = 100; // Nouvelle largeur de l'eau
-const waterHeight = 100; // Nouvelle hauteur de l'eau
-const boatWidth = 100; // Nouvelle largeur du bateau
-const boatHeight = 100; // Nouvelle hauteur du bateau
+const solWidth = 100; // Nouvelle largeur de l'eau
+const solHeight = 100; // Nouvelle hauteur de l'eau
+const PersoImmoWidth = 100; // Nouvelle largeur du bateau
+const PersoImmoHeight = 100; // Nouvelle hauteur du bateau
 
 // Taille des iles
-const cervWidth = 200;
-const cervHeight = 200;
+const bobineWidth = 200;
+const bobineHeight = 200;
 
-const poumWidth = 200;
-const poumHeight = 200;
+const chaiseWidth = 200;
+const chaiseHeight = 200;
 
-const foieWidth = 200;
-const foieHeight = 200;
+const ecranWidth = 200;
+const ecranHeight = 200;
 
-const reinWidth = 200;
-const reinHeight = 200;
+const meubleWidth = 200;
+const meubleHeight = 200;
 
-const coeurWidth = 200;
-const coeurHeight = 200;
+const projoWidth = 200;
+const projoHeight = 200;
 
 //createPopup("Bienvenue sur le jeu des 24heures de l'info !\nVotre objectif est de trouver les différentes informations afin de resoudre l'énigme finale!\nPour vous déplacer, utilisez les flèches du clavier.\nBonne chance !");
 
@@ -97,13 +93,13 @@ const onImageLoad = () => {
         requestAnimationFrame(gameLoop);
 };
 
-waterImage.onload = onImageLoad;
-boatImage.onload = onImageLoad;
-cervImage.onload = onImageLoad;
-poumImage.onload = onImageLoad;
-foieImage.onload = onImageLoad;
-reinImage.onload = onImageLoad;
-coeurImage.onload = onImageLoad;
+solImage.onload = onImageLoad;
+PersoImmoImage.onload = onImageLoad;
+bobineImage.onload = onImageLoad;
+chaiseImage.onload = onImageLoad;
+ecranImage.onload = onImageLoad;
+meubleImage.onload = onImageLoad;
+projoImage.onload = onImageLoad;
 
 
 // Gérer les touches
@@ -126,14 +122,14 @@ window.addEventListener("keyup", (e) => {
     if (keys.hasOwnProperty(e.key)) keys[e.key] = false;
 });
 
-const boatX = canvas.width / 2 - boatWidth / 2;
-const boatY = canvas.height / 2 - boatHeight / 2;
+const PersoImmoX = canvas.width / 2 - PersoImmoWidth / 2;
+const PersoImmoY = canvas.height / 2 - PersoImmoHeight / 2;
 
 function checkCollision(x, y, width, height) {
-    return boatX < x + width &&
-           boatX + boatWidth > x &&
-           boatY < y + height &&
-           boatY + boatHeight > y;
+    return PersoImmoX < x + width &&
+           PersoImmoX + PersoImmoWidth > x &&
+           PersoImmoY < y + height &&
+           PersoImmoY + PersoImmoHeight > y;
 }
 
 
@@ -182,23 +178,23 @@ function createPopup(text) {
 
 function checkAllCollision(){
 
-    if (checkCollision(poumX-viewX, poumY-viewY, poumWidth, poumHeight) && !poumColl){
-        poumColl = true;
-        createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des poumons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des poumons endommagés par la pollution.")
+    if (checkCollision(chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight) && !chaiseColl){
+        chaiseColl = true;
+        createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des chaiseons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des chaiseons endommagés par la pollution.")
     }
 
-    if (checkCollision(foieX-viewX, foieY-viewY, foieWidth, foieHeight) && !foieColl){
-        foieColl = true;
-        createPopup("Le foie est un organe vital qui permet de détoxifier l’organisme, à l’instar des écosystèmes qui permettent de réguler les pollutions.\n\nIl est cependant menacé par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des écosystèmes dégradés par les activités humaines.")
+    if (checkCollision(ecranX-viewX, ecranY-viewY, ecranWidth, ecranHeight) && !ecranColl){
+        ecranColl = true;
+        createPopup("Le ecran est un organe vital qui permet de détoxifier l’organisme, à l’instar des écosystèmes qui permettent de réguler les pollutions.\n\nIl est cependant menacé par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des écosystèmes dégradés par les activités humaines.")
     }
 
-    if (checkCollision(reinX-viewX, reinY-viewY, reinWidth, reinHeight) && !reinColl){
-        reinColl = true;
-        createPopup("Les reins sont des organes vitaux qui permettent de filtrer le sang et d’éliminer les déchets, à l’instar des rivières qui permettent de réguler les pollutions.\n\nIls sont cependant menacés par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des rivières dégradées par les activités humaines.")
+    if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
+        meubleColl = true;
+        createPopup("Les meubles sont des organes vitaux qui permettent de filtrer le sang et d’éliminer les déchets, à l’instar des rivières qui permettent de réguler les pollutions.\n\nIls sont cependant menacés par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des rivières dégradées par les activités humaines.")
     }
 
-    if (checkCollision(coeurX-viewX, coeurY-viewY, coeurWidth, coeurHeight) && !coeurColl){
-        coeurColl = true;
+    if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !projoColl){
+        projoColl = true;
         createPopup("Les courants marins sont des mouvements d’eau qui permettent de réguler la température des océans et de transporter les nutriments, à l’instar du cœur qui permet de réguler la circulation sanguine.\n\nIls sont cependant menacés par le réchauffement climatique et la pollution, provoquant des perturbations des écosystèmes marins, semblable à des troubles cardiaques.")
     }
 }
@@ -206,7 +202,7 @@ function checkAllCollision(){
 let quiz_effectue = false;
 
 function quiz(){
-    if (poumColl && foieColl && reinColl && coeurColl && checkCollision(cervX-viewX, cervY-viewY, cervWidth, cervHeight) && !popup && !quiz_effectue){
+    if (chaiseColl && ecranColl && meubleColl && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
         popup = true
 
         let div = document.createElement("div");
@@ -296,9 +292,9 @@ function quiz(){
         }, 50);
         document.body.appendChild(div);
     }
-    else if (checkCollision(cervX-viewX, cervY-viewY, cervWidth, cervHeight) && !cervoColl && !popup && !quiz_effectue){
+    else if (checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !bobineoColl && !popup && !quiz_effectue){
         createPopup("Vous n'avez pas encore trouvé toutes les informations nécessaires pour résoudre l'énigme...")
-        cervoColl = true;
+        bobineoColl = true;
     }
 }
 
@@ -335,16 +331,16 @@ function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Dessiner la carte (mosaïque de l'image)
-    for (let y = 0; y < mapHeight; y += waterHeight) {
-        for (let x = 0; x < mapWidth; x += waterWidth) {
-            ctx.drawImage(waterImage, x - viewX, y - viewY, waterWidth, waterHeight);
+    for (let y = 0; y < mapHeight; y += solHeight) {
+        for (let x = 0; x < mapWidth; x += solWidth) {
+            ctx.drawImage(solImage, x - viewX, y - viewY, solWidth, solHeight);
         }
     }
     // Dessiner le bateau au centre de la vue
-    const boatX = canvas.width / 2 - boatWidth / 2;
-    const boatY = canvas.height / 2 - boatHeight / 2;
-    ctx.drawImage(cervImage, cervX-viewX, cervY-viewY, cervWidth, cervHeight);
-    ctx.drawImage(boatImage, boatX, boatY, boatWidth, boatHeight);
+    const PersoImmoX = canvas.width / 2 - PersoImmoWidth / 2;
+    const PersoImmoY = canvas.height / 2 - PersoImmoHeight / 2;
+    ctx.drawImage(bobineImage, bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight);
+    ctx.drawImage(PersoImmoImage, PersoImmoX, PersoImmoY, PersoImmoWidth, PersoImmoHeight);
 
     checkAllCollision();
     quiz();
