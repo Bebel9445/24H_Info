@@ -49,6 +49,5 @@ while not comparer(drones, origine) or count == 0:
     for i in lines:
         mouvement(i, drones)
     count += 1
-    print("count =", count)
 
 print("Les drones sont revenus à leur position d'origine en ", count, "mouvements.")
