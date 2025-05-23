@@ -20,7 +20,7 @@ const mapHeight = 5000;
 let viewX = 2500;
 let viewY = 2500;
 
-// Position des iles
+// Position des objets
 let bobineX = 2500;
 let bobineY = 2500;
 
@@ -67,24 +67,24 @@ let popup = false; // Popup affiché ou non
 
 const SolWidth = 100; // Nouvelle largeur de l'eau
 const SolHeight = 100; // Nouvelle hauteur de l'eau
-const PersoImmoWidth = 100; // Nouvelle largeur du bateau
-const PersoImmoHeight = 100; // Nouvelle hauteur du bateau
+const PersoImmoWidth = 140; // Nouvelle largeur du bateau
+const PersoImmoHeight = 291; // Nouvelle hauteur du bateau
 
 // Taille des iles
-const bobineWidth = 200;
-const bobineHeight = 200;
+const bobineWidth = 100;
+const bobineHeight = 100;
 
-const chaiseWidth = 200;
-const chaiseHeight = 200;
+const chaiseWidth = 100;
+const chaiseHeight = 100;
 
-const ecranWidth = 200;
-const ecranHeight = 200;
+const ecranWidth = 100;
+const ecranHeight = 100;
 
-const meubleWidth = 200;
-const meubleHeight = 200;
+const meubleWidth = 100;
+const meubleHeight = 100;
 
-const projoWidth = 200;
-const projoHeight = 200;
+const projoWidth = 100;
+const projoHeight = 100;
 
 //createPopup("Bienvenue sur le jeu des 24heures de l'info !\nVotre objectif est de trouver les différentes informations afin de resoudre l'énigme finale!\nPour vous déplacer, utilisez les flèches du clavier.\nBonne chance !");
 
