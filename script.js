@@ -37,12 +37,11 @@ let projoX = 1750;
 let projoY = 3000;
 
 // Vitesse de déplacement
-const speed = 3;
+const speed = 1;
 
 // Charger les images
 const PersoImmoImage = new Image();
 PersoImmoImage.src = "assets/PersoImmo.png";
-let PersoImmoColl = false;
 
 const bobineImage = new Image();
 bobineImage.src = "assets/bobine.png";
@@ -179,25 +178,27 @@ function createPopup(text) {
 
 function checkAllCollision(){
 
-    if (checkCollision(chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight) && !chaiseColl){
-        chaiseColl = true;
-        createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des chaiseons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des chaiseons endommagés par la pollution.")
-    }
-
     if (checkCollision(ecranX-viewX, ecranY-viewY, ecranWidth, ecranHeight) && !ecranColl){
-        ecranColl = true;
-        createPopup("Le ecran est un organe vital qui permet de détoxifier l’organisme, à l’instar des écosystèmes qui permettent de réguler les pollutions.\n\nIl est cependant menacé par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des écosystèmes dégradés par les activités humaines.")
-    }
+    ecranColl = true;
+    createPopup("... ton texte ...");
+    ecranX = -1000;
+    ecranY = -1000;
+}
 
-    if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
-        meubleColl = true;
-        createPopup("Les meubles sont des organes vitaux qui permettent de filtrer le sang et d’éliminer les déchets, à l’instar des rivières qui permettent de réguler les pollutions.\n\nIls sont cependant menacés par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des rivières dégradées par les activités humaines.")
-    }
+if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
+    meubleColl = true;
+    createPopup("... ton texte ...");
+    meubleX = -1000;
+    meubleY = -1000;
+}
 
-    if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !projoColl){
-        projoColl = true;
-        createPopup("Les courants marins sont des mouvements d’eau qui permettent de réguler la température des océans et de transporter les nutriments, à l’instar du cœur qui permet de réguler la circulation sanguine.\n\nIls sont cependant menacés par le réchauffement climatique et la pollution, provoquant des perturbations des écosystèmes marins, semblable à des troubles cardiaques.")
-    }
+if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !projoColl){
+    projoColl = true;
+    createPopup("... ton texte ...");
+    projoX = -1000;
+    projoY = -1000;
+}
+
 }
 
 let quiz_effectue = false;
@@ -293,9 +294,9 @@ function quiz(){
         }, 50);
         document.body.appendChild(div);
     }
-    else if (checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !bobineoColl && !popup && !quiz_effectue){
+    else if (checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !bobineColl && !popup && !quiz_effectue){
         createPopup("Vous n'avez pas encore trouvé toutes les informations nécessaires pour résoudre l'énigme...")
-        bobineoColl = true;
+        bobineColl = true;
     }
 }
 
