@@ -5,6 +5,9 @@ function test() {
 const SolImage = new Image();
 SolImage.src = "assets/Sol.jpg";
 
+const MurImage = new Image();
+MurImage.src = "assets/mur.jpg";
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -13,28 +16,38 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Taille de la carte
-const mapWidth = 5000;
-const mapHeight = 5000;
+const mapWidth = 3500;
+const mapHeight = 1500;
 
 // Position de la "vue" (viewport)
-let viewX = 2500;
-let viewY = 2500;
+
+let viewX = 500;
+let viewY = 400;
 
 // Position des objets
-let bobineX = 2500;
-let bobineY = 2500;
+let bobineX = 1850;
+let bobineY = 260;
 
-let chaiseX = 1750;
-let chaiseY = 2000;
+let chaiseX = 2300;
+let chaiseY = 350;
 
-let ecranX = 3250;
-let ecranY = 3250;
+let chaiseX1 = 2500;
+let chaiseY1 = 400;
 
-let meubleX = 3250;
-let meubleY = 2000;
+let ecranX = 1520;
+let ecranY = 1700;
 
-let projoX = 1750;
-let projoY = 3000;
+let meubleX = 1200;
+let meubleY = 300;
+let meubleX1 = 1500;
+let meubleY1 = 300;
+let meubleX2 = 1800;
+let meubleY2 = 300;
+let meubleX3 = 2100;
+let meubleY3 = 300;
+
+let projoX = 1550;
+let projoY = 250;
 
 // Vitesse de déplacement
 const speed = 3;
@@ -52,6 +65,9 @@ const chaiseImage = new Image();
 chaiseImage.src = "assets/chaise.png";
 let chaiseColl = false;
 
+const chaiseImage1 = new Image();
+chaiseImage1.src = "assets/chaise.png";
+
 const ecranImage = new Image();
 ecranImage.src = "assets/ecran.png";
 let ecranColl = false;
@@ -59,6 +75,13 @@ let ecranColl = false;
 const meubleImage = new Image();
 meubleImage.src = "assets/meuble.png";
 let meubleColl = false;
+
+const meubleImage1 = new Image();
+meubleImage1.src = "assets/meuble.png";
+const meubleImage2 = new Image();
+meubleImage2.src = "assets/meuble.png";
+const meubleImage3 = new Image();
+meubleImage3.src = "assets/meuble.png";
 
 const projoImage = new Image();
 projoImage.src = "assets/projo.png";
@@ -68,6 +91,8 @@ let popup = false; // Popup affiché ou non
 
 const SolWidth = 100; // Nouvelle largeur de l'eau
 const SolHeight = 100; // Nouvelle hauteur de l'eau
+const MurWidth = 400; // Nouvelle largeur de l'eau
+const MurHeight = 400; // Nouvelle hauteur de l'eau
 const PersoImmoWidth = 140; // Nouvelle largeur du bateau
 const PersoImmoHeight = 291; // Nouvelle hauteur du bateau
 
@@ -75,14 +100,20 @@ const PersoImmoHeight = 291; // Nouvelle hauteur du bateau
 const bobineWidth = 100;
 const bobineHeight = 100;
 
-const chaiseWidth = 100;
-const chaiseHeight = 100;
+const chaiseWidth = 225;
+const chaiseHeight = 225;
 
 const ecranWidth = 100;
 const ecranHeight = 100;
 
-const meubleWidth = 100;
-const meubleHeight = 100;
+const meubleWidth = 250;
+const meubleHeight = 250;
+const meubleWidth1 = 250;
+const meubleHeight1 = 250;
+const meubleWidth2 = 250;
+const meubleHeight2 = 250;
+const meubleWidth3 = 250;
+const meubleHeight3 = 250;
 
 const projoWidth = 100;
 const projoHeight = 100;
@@ -179,7 +210,7 @@ function createPopup(text) {
 
 function checkAllCollision(){
 
-    if (checkCollision(chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight) && !chaiseColl){
+    if (checkCollision(chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight)&& !chaiseColl ){
         chaiseColl = true;
         createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des chaiseons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des chaiseons endommagés par la pollution.")
     }
@@ -309,14 +340,14 @@ function checkReponses(){
         5: "bln"
     }
     let correct = 0;
-    for (let i = 1; i <= 6; i++){
+    for (let i = 1; i <= 5; i++){
         let select = document.getElementById(i.toString());
         if (select.value === reponses[i]){
             correct++;
         }
     }
     quiz_popup.remove();    
-    createPopup(`Vous avez trouvé ${correct} bonnes réponses sur 6.`);
+    createPopup(`Vous avez trouvé ${correct} bonnes réponses sur 5.`);
     quiz_effectue = true;
 }
 
@@ -337,11 +368,32 @@ function gameLoop() {
             ctx.drawImage(SolImage, x - viewX, y - viewY, SolWidth, SolHeight);
         }
     }
+
+    // Dessiner la carte (mosaïque de l'image)
+    for (let x = 0; x < mapWidth; x += MurWidth) {
+    ctx.drawImage(MurImage, x - viewX, 0 - viewY, MurWidth, MurHeight);
+}
+
+
     // Dessiner le bateau au centre de la vue
     const PersoImmoX = canvas.width / 2 - PersoImmoWidth / 2;
     const PersoImmoY = canvas.height / 2 - PersoImmoHeight / 2;
+
+    ctx.drawImage(meubleImage1, meubleX1-viewX, meubleY1-viewY, meubleWidth1, meubleHeight1);
+    ctx.drawImage(meubleImage2, meubleX2-viewX, meubleY2-viewY, meubleWidth2, meubleHeight2);
+    ctx.drawImage(meubleImage3, meubleX3-viewX, meubleY3-viewY, meubleWidth3, meubleHeight3);
+
+
     ctx.drawImage(bobineImage, bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight);
+    ctx.drawImage(chaiseImage, chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight);
+    ctx.drawImage(chaiseImage1, chaiseX1-viewX, chaiseY1-viewY, chaiseWidth, chaiseHeight);
+    ctx.drawImage(ecranImage, ecranX-viewX, ecranY-viewY, ecranWidth, ecranHeight);
+    ctx.drawImage(meubleImage, meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight);
+    ctx.drawImage(projoImage, projoX-viewX, projoY-viewY, projoWidth, projoHeight);
+   
+    
     ctx.drawImage(PersoImmoImage, PersoImmoX, PersoImmoY, PersoImmoWidth, PersoImmoHeight);
+
 
     checkAllCollision();
     quiz();
