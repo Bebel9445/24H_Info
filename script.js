@@ -20,25 +20,6 @@ const mapHeight = 5000;
 let viewX = 2500;
 let viewY = 2500;
 
-// Position des objets
-let bobineX = 2500;
-let bobineY = 2500;
-
-let chaiseX = 1750;
-let chaiseY = 2000;
-
-let ecranX = 3250;
-let ecranY = 3250;
-
-let PorteVoixX = 3250;
-let PorteVoixY = 2000;
-
-let projoX = 1750;
-let projoY = 3000;
-
-// Vitesse de déplacement
-const speed = 1;
-
 // Charger les images
 const PersoImmoImage = new Image();
 PersoImmoImage.src = "assets/PersoImmo.png";
@@ -64,6 +45,25 @@ projoImage.src = "assets/projo.png";
 let projoColl = false;
 
 let popup = false; // Popup affiché ou non
+
+// Position des objets
+let bobineX = 2500;
+let bobineY = 2500;
+
+let chaiseX = 1750;
+let chaiseY = 2000;
+
+let ecranX = 3250;
+let ecranY = 3250;
+
+let PorteVoixX = 3250;
+let PorteVoixY = 2000;
+
+let projoX = 1750;
+let projoY = 3000;
+
+// Vitesse de déplacement
+const speed = 0.5;
 
 const SolWidth = 100; // Nouvelle largeur de l'eau
 const SolHeight = 100; // Nouvelle hauteur de l'eau
