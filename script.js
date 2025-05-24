@@ -138,7 +138,7 @@ function createPopup(text) {
     let div = document.createElement("div");
     div.innerText = text;
     div.style.fontSize = "24px";
-    div.style.backgroundImage = "url('assets/parchemin.png')";
+    div.style.backgroundImage = "url('assets/parchemin.jpg')";
     div.style.backgroundSize = "cover";
     div.style.backgroundRepeat = "no-repeat";
     div.style.backgroundPosition = "center";
@@ -210,7 +210,7 @@ function quiz(){
         let div = document.createElement("div");
         div.id = "quiz";
         div.style.fontSize = "24px";
-        div.style.backgroundImage = "url('assets/parchemin.png')";
+        div.style.backgroundImage = "url('assets/parchemin.jpg')";
         div.style.backgroundSize = "cover";
         div.style.backgroundRepeat = "no-repeat";
         div.style.backgroundPosition = "center";
