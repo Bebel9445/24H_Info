@@ -130,7 +130,7 @@ const meubleHeight3 = 250;
 const projoWidth = 100;
 const projoHeight = 100;
 
-//createPopup("Bienvenue sur le jeu des 24heures de l'info !\nVotre objectif est de trouver les différentes informations afin de resoudre l'énigme finale!\nPour vous déplacer, utilisez les flèches du clavier.\nBonne chance !");
+createPopup("Bienvenue sur le jeu des 24heures de l'info !\nVotre objectif est de trouver les différentes informations afin de resoudre l'énigme finale!\nPour vous déplacer, utilisez les flèches du clavier.\nBonne chance !");
 
 // Lorsque les images sont chargées
 let imagesLoaded = 0;
@@ -179,36 +179,38 @@ function checkCollision(x, y, width, height) {
 }
 
 function createPopup(text) {
-    popup = true
+    popup = true;
     let div = document.createElement("div");
     div.innerText = text;
+
     div.style.fontSize = "24px";
-    div.style.backgroundImage = "url('assets/parchemin.jpg')";
+    div.style.backgroundImage = "url('assets/parchemin.png')";
     div.style.backgroundSize = "cover";
     div.style.backgroundRepeat = "no-repeat";
     div.style.backgroundPosition = "center";
+
+    // CENTRAGE ET STYLE
     div.style.display = "flex";
+    div.style.flexDirection = "column";
     div.style.justifyContent = "center";
-    div.style.textAlign = "center",
     div.style.alignItems = "center";
+    div.style.textAlign = "center";
+    div.style.color = "red";
     div.style.position = "absolute";
-    div.style.width = "400px";
-    div.style.height = "400px";
+    div.style.width = "800px";
+    div.style.height = "800px";
     div.style.top = "50%";
     div.style.left = "50%";
     div.style.transform = "translate(-50%, -50%)";
-    div.style.color = "white";
-    div.style.paddingLeft = "50px";
-    div.style.paddingRight = "350px";
     div.style.borderRadius = "10px";
-    div.className = "popup"
+    div.style.padding = "40px";
+    div.className = "popup";
+
     let opacity = 0;
     div.style.opacity = 0;
     const interval = setInterval(() => {
-        opacity += 0.1; // Augmente par pas de 0.05
+        opacity += 0.1;
         div.style.opacity = opacity;
-
-        // Stoppe l'intervalle quand l'opacité atteint 1
         if (opacity >= 1) {
             clearInterval(interval);
         }
@@ -225,13 +227,13 @@ function checkAllCollision(){
 
     if (checkCollision(chaiseX-viewX, chaiseY-viewY, chaiseWidth, chaiseHeight)&& !chaiseColl ){
         chaiseColl = true;
-        createPopup("La première projection collective gratuite de films photographiques sur grand écran c'est déroulée le 22 mars 1895, devant un parterre restreint de savants de la Société d'encouragement pour l'industrie nationale.")
+        createPopup("La première projection collective gratuite de films photographiques sur grand écran s'est déroulée le 22 mars 1895,\ndevant un parterre restreint de savants de la Société d'encouragement pour l'industrie nationale.")
 
     }
 
     if (checkCollision(chaiseX1-viewX, chaiseY1-viewY, chaiseWidth, chaiseHeight)&& !chaiseColl1 ){
         chaiseColl1 = true;
-        createPopup("Le premier film tourné par Louis Lumière est Sortie d'usine, plus connu aujourd'hui sous le nom de La Sortie de l'usine Lumière à Lyon.")
+        createPopup("Le premier film tourné par Louis Lumière est Sortie d'usine,\nplus connu aujourd'hui sous le nom de La Sortie de l'usine Lumière à Lyon.")
 
     }
 
@@ -242,51 +244,55 @@ function checkAllCollision(){
 
     if (checkCollision(PorteVoixX-viewX, PorteVoixY-viewY, PorteVoixWidth, PorteVoixHeight) && !PorteVoixColl){
         PorteVoixColl = true;
-        createPopup("Le premier film a été tourné le 19 mars 1895, à Lyon rue Saint-Victor (rue actuellement nommée rue du Premier-Film).");
+        createPopup("Le premier film a été tourné le 19 mars 1895,\nà Lyon rue Saint-Victor (rue actuellement nommée rue du Premier-Film).");
 
     }
 
     if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
         meubleColl = true;
-        createPopup("En 1896, les Lumière ouvrirent des salles de spectacle cinématographe à Londres, à Bruxelles et à New York, diffusant la quarantaine de films qu’ils avaient tourné sur la vie quotidienne des Français.");
+        createPopup("En 1896, les Lumière ouvrirent des salles de spectacle cinématographe à Londres, à Bruxelles et à New York,\ndiffusant la quarantaine de films qu’ils avaient tourné sur la vie quotidienne des Français.");
 
     }
 
     if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !projoColl){
         projoColl = true;
-        createPopup("Douze projections on eu lieu en France (Paris, Lyon, La Ciotat, Grenoble) et en Belgique (Bruxelles, Louvain), avec un programme de films de plus en plus étoffé durant l’année.")
+        createPopup("Douze projections on eu lieu en France (Paris, Lyon, La Ciotat, Grenoble) et en Belgique (Bruxelles, Louvain),\navec un programme de films de plus en plus étoffé durant l’année.")
  
     }
 }
 
 let quiz_effectue = false;
 
-function quiz(){
+function quiz() {
     if (chaiseColl && PorteVoixColl && meubleColl && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
-        popup = true
+        popup = true;
 
         let div = document.createElement("div");
         div.id = "quiz";
         div.style.fontSize = "24px";
-        div.style.backgroundImage = "url('assets/parchemin.jpg')";
+        div.style.backgroundImage = "url('assets/parchemin.png')";
         div.style.backgroundSize = "cover";
         div.style.backgroundRepeat = "no-repeat";
         div.style.backgroundPosition = "center";
+
+        // CENTRAGE & COULEUR
+        div.style.display = "flex";
+        div.style.flexDirection = "column";
         div.style.justifyContent = "center";
-        div.style.textAlign = "center",
         div.style.alignItems = "center";
+        div.style.textAlign = "center";
+        div.style.color = "red";
+
         div.style.position = "absolute";
         div.style.width = "800px";
         div.style.height = "800px";
         div.style.top = "50%";
         div.style.left = "50%";
         div.style.transform = "translate(-50%, -50%)";
-        div.style.color = "white";
-        div.style.paddingTop = "300px";
-        div.style.paddingLeft = "100px";
-        div.style.paddingRight = "700px";
+        div.style.padding = "40px";
+        div.style.boxSizing = "border-box";
         div.style.borderRadius = "10px";
-        div.className = "popup"
+        div.className = "popup";
         let opacity = 0;
         div.style.opacity = 0;
         div.innerHTML = `<p>
