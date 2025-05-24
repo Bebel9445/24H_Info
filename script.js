@@ -46,11 +46,14 @@ let meubleY2 = 300;
 let meubleX3 = 2100;
 let meubleY3 = 300;
 
+let PorteVoixX = 2150;
+let PorteVoixY = 250;
+
 let projoX = 1550;
 let projoY = 250;
 
 // Vitesse de déplacement
-const speed = 3;
+const speed = 1;
 
 // Charger les images
 const PersoImmoImage = new Image();
@@ -67,10 +70,15 @@ let chaiseColl = false;
 
 const chaiseImage1 = new Image();
 chaiseImage1.src = "assets/chaise.png";
+let chaiseColl1 = false;
 
 const ecranImage = new Image();
 ecranImage.src = "assets/ecran.png";
 let ecranColl = false;
+
+const PorteVoixImage = new Image();
+PorteVoixImage.src = "assets/PorteVoix.png";
+let PorteVoixColl = false;
 
 const meubleImage = new Image();
 meubleImage.src = "assets/meuble.png";
@@ -106,6 +114,9 @@ const chaiseHeight = 225;
 const ecranWidth = 100;
 const ecranHeight = 100;
 
+const PorteVoixWidth = 100;
+const PorteVoixHeight = 100;
+
 const meubleWidth = 250;
 const meubleHeight = 250;
 const meubleWidth1 = 250;
@@ -132,6 +143,7 @@ bobineImage.onload = onImageLoad;
 chaiseImage.onload = onImageLoad;
 ecranImage.onload = onImageLoad;
 meubleImage.onload = onImageLoad;
+PorteVoixImage.onload = onImageLoad;
 projoImage.onload = onImageLoad;
 
 
@@ -170,7 +182,7 @@ function createPopup(text) {
     let div = document.createElement("div");
     div.innerText = text;
     div.style.fontSize = "24px";
-    div.style.backgroundImage = "url('assets/parchemin.png')";
+    div.style.backgroundImage = "url('assets/parchemin.jpg')";
     div.style.backgroundSize = "cover";
     div.style.backgroundRepeat = "no-repeat";
     div.style.backgroundPosition = "center";
@@ -215,9 +227,23 @@ function checkAllCollision(){
         createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des chaiseons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des chaiseons endommagés par la pollution.")
     }
 
+    if (checkCollision(chaiseX1-viewX, chaiseY1-viewY, chaiseWidth, chaiseHeight)&& !chaiseColl1 ){
+        chaiseColl1 = true;
+        createPopup("Les récifs coraliens possèdent une grande biodiversité et génèrent une grande partie de l’oxygène océanique, à l’instar des chaiseons qui permettent les échanges gazeux dans le corps.\n\nIls sont cepedendant menacés par l’acidification des océans et le réchauffement climatique, provoquant leur blanchissement, semblable à des chaiseons endommagés par la pollution.")
+    }
+
     if (checkCollision(ecranX-viewX, ecranY-viewY, ecranWidth, ecranHeight) && !ecranColl){
         ecranColl = true;
-        createPopup("Le ecran est un organe vital qui permet de détoxifier l’organisme, à l’instar des écosystèmes qui permettent de réguler les pollutions.\n\nIl est cependant menacé par la pollution, les pesticides et les métaux lourds, provoquant des maladies et des cancers, semblable à des écosystèmes dégradés par les activités humaines.")
+        createPopup("... ton texte ...");
+        ecranX = -1000;
+        ecranY = -1000;
+    }
+
+    if (checkCollision(PorteVoixX-viewX, PorteVoixY-viewY, PorteVoixWidth, PorteVoixHeight) && !PorteVoixColl){
+        PorteVoixColl = true;
+        createPopup("... ton texte ...");
+        PorteVoixX = -1000;
+        PorteVoixY = -1000;
     }
 
     if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
@@ -234,13 +260,13 @@ function checkAllCollision(){
 let quiz_effectue = false;
 
 function quiz(){
-    if (chaiseColl && ecranColl && meubleColl && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
+    if (chaiseColl && PorteVoixColl && meubleColl && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
         popup = true
 
         let div = document.createElement("div");
         div.id = "quiz";
         div.style.fontSize = "24px";
-        div.style.backgroundImage = "url('assets/parchemin.png')";
+        div.style.backgroundImage = "url('assets/parchemin.jpg')";
         div.style.backgroundSize = "cover";
         div.style.backgroundRepeat = "no-repeat";
         div.style.backgroundPosition = "center";
