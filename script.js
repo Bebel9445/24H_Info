@@ -30,8 +30,8 @@ let chaiseY = 2000;
 let ecranX = 3250;
 let ecranY = 3250;
 
-let meubleX = 3250;
-let meubleY = 2000;
+let PorteVoixX = 3250;
+let PorteVoixY = 2000;
 
 let projoX = 1750;
 let projoY = 3000;
@@ -55,9 +55,9 @@ const ecranImage = new Image();
 ecranImage.src = "assets/ecran.png";
 let ecranColl = false;
 
-const meubleImage = new Image();
-meubleImage.src = "assets/meuble.png";
-let meubleColl = false;
+const PorteVoixImage = new Image();
+PorteVoixImage.src = "assets/PorteVoix.png";
+let PorteVoixColl = false;
 
 const projoImage = new Image();
 projoImage.src = "assets/projo.png";
@@ -80,8 +80,8 @@ const chaiseHeight = 100;
 const ecranWidth = 100;
 const ecranHeight = 100;
 
-const meubleWidth = 100;
-const meubleHeight = 100;
+const PorteVoixWidth = 100;
+const PorteVoixHeight = 100;
 
 const projoWidth = 100;
 const projoHeight = 100;
@@ -99,7 +99,7 @@ PersoImmoImage.onload = onImageLoad;
 bobineImage.onload = onImageLoad;
 chaiseImage.onload = onImageLoad;
 ecranImage.onload = onImageLoad;
-meubleImage.onload = onImageLoad;
+PorteVoixImage.onload = onImageLoad;
 projoImage.onload = onImageLoad;
 
 
@@ -185,11 +185,11 @@ function checkAllCollision(){
     ecranY = -1000;
 }
 
-if (checkCollision(meubleX-viewX, meubleY-viewY, meubleWidth, meubleHeight) && !meubleColl){
-    meubleColl = true;
+if (checkCollision(PorteVoixX-viewX, PorteVoixY-viewY, PorteVoixWidth, PorteVoixHeight) && !PorteVoixColl){
+    PorteVoixColl = true;
     createPopup("... ton texte ...");
-    meubleX = -1000;
-    meubleY = -1000;
+    PorteVoixX = -1000;
+    PorteVoixY = -1000;
 }
 
 if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !projoColl){
@@ -204,7 +204,7 @@ if (checkCollision(projoX-viewX, projoY-viewY, projoWidth, projoHeight) && !proj
 let quiz_effectue = false;
 
 function quiz(){
-    if (chaiseColl && ecranColl && meubleColl && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
+    if (chaiseColl && ecranColl && PorteVoix.Coll && projoColl && checkCollision(bobineX-viewX, bobineY-viewY, bobineWidth, bobineHeight) && !popup && !quiz_effectue){
         popup = true
 
         let div = document.createElement("div");
